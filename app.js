@@ -9,6 +9,11 @@ app.set('view engine','ejs'); //setea algunos aspectos de vista. motores de vist
 app.set('views',__dirname + '/views')//donde se encuentra nuestras vistas?
 const port = 3500;
 
+//confiragamos el metodo override(delete y put) que instalamos por npm 
+const methodOverride = require('method-override');
+
+app.use(methodOverride('_method'));
+
 /* ---IDE BOARD-- ACCESIBLE A TODAS LAS VISTA(img,video,etc), CADA VEZ QUE SE EJECUTA PASA X ACA, */
 //                      (recursos estaticos)
 app.use(express.static(__dirname + '/public'))

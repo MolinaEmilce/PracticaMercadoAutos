@@ -11,8 +11,8 @@ router.get('/autos/create',carCreate); // trae solo el formulario ingresa datos 
 router.post('/autos/store',carStore); //recibe datos nuevos y los guardas - ACA SE TERMINA DE CREAR Y SE GUARDA
 
 router.get('/autos/edit/:id',carEdit); //SOLO CARGA los datos precargados que queremos editar SOLO LO TRAE
-router.post('/autos/update/:id',carUpdate); //RECIBE DATOS del formulario precargado y si hay cambios guardamos en el mismo, SE GUARDA MODIFICACIONES
+router.put('/autos/update/:id',carUpdate); //RECIBE DATOS del formulario precargado y si hay cambios guardamos en el mismo, SE GUARDA MODIFICACIONES
 
 
-router.get('/autos/delete/:id',carDelete); //BORRA un registro que cooincida con el id
+router.delete('/autos/delete/:id',carDelete); //BORRA un registro que cooincida con el id
 module.exports = router;
